@@ -29,17 +29,28 @@ class Database {
              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"
         );
         
+        // Prepare variables for bind_param (needs references)
+        $fullName = $data['fullName'];
+        $phone = $data['phone'];
+        $email = $data['email'];
+        $serviceType = $data['serviceType'] ?? null;
+        $coverageType = $data['coverageType'] ?? null;
+        $location = $data['location'] ?? null;
+        $notes = $data['notes'];
+        $ip = $data['ip_address'];
+        $userAgent = $data['user_agent'];
+
         $stmt->bind_param(
             "sssssssss",
-            $data['fullName'],
-            $data['phone'],
-            $data['email'],
-            $data['serviceType'] ?? null,  // Allow null
-            $data['coverageType'] ?? null, // Allow null
-            $data['location'] ?? null,     // Allow null
-            $data['notes'],                // Message maps to notes
-            $data['ip_address'],
-            $data['user_agent']
+            $fullName,
+            $phone,
+            $email,
+            $serviceType,
+            $coverageType,
+            $location,
+            $notes,
+            $ip,
+            $userAgent
         );
         
         if ($stmt->execute()) {
