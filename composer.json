@@ -1,0 +1,15 @@
+{
+    "name": "accuresecurity/quote-system",
+    "description": "AccureSecurity Quote Request System with Email Notifications",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "phpmailer/phpmailer": "^6.8"
+    },
+    "autoload": {
+        "classmap": [
+            "Database.php",
+            "EmailService.php"
+        ]
+    }
+}

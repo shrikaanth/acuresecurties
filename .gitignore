@@ -1,0 +1,53 @@
+# Sensitive Configuration Files
+config.php
+.env
+
+# Vendor Dependencies
+vendor/
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Log Files
+*.log
+error_log
+debug.log
+
+# Temporary Files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Database Backups
+*.sql.backup
+*.sql.gz
+
+# Test Files (optional - remove these lines if you want to commit test files)
+test-*.php
+test-*.html
+verify-setup.php
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Backup Files
+*.bak
+*.backup
+*~
+
+# Email Test Files
+test-email.php
+test-smtp.php
